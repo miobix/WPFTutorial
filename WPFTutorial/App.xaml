@@ -1,0 +1,19 @@
+﻿<Application x:Class="WPFTutorial.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFTutorial"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             
+             StartupUri="Button.xaml"
+             DispatcherUnhandledException="Application_DispatcherUnhandledException">
+    <!--StartupUri tells which Window or page is to be started-->
+
+    <!--DispatcherUnhandledException="Application_DispatcherUnhandledException" takes care of unhandled exceptions, just as a safeguard!-->
+    <!--This is a call to a method, check the code for App.xaml.cs-->
+
+        <!--Application resources: global resources available from all over the application, like global styles-->
+    <Application.Resources>
+        <sys:String x:Key="strApp">Hello, Application world!</sys:String>
+    </Application.Resources>
+</Application>
+
