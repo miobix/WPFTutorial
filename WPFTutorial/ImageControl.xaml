@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPFTutorial.ImageControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTutorial"
+        mc:Ignorable="d"
+        Title="ImageControl" Height="900" Width="600">
+    <StackPanel>
+        <Label HorizontalAlignment="Center" >A Preloaded Image, xaml side</Label>
+        <Image Source="/WPFTutorial;component/Images/wpf-training.png" Height="200" Width="300"/>
+        <!--Source can also be just the /Images/.. path"-->
+
+        <Label HorizontalAlignment="Center" >Load an image from code-behind. User loaded or preloaded</Label>
+        <StackPanel>
+            <WrapPanel Margin="10" HorizontalAlignment="Center">
+                <Button Name="btnLoadFromFile" Margin="0,0,20,0" Click="BtnLoadFromFile_Click">Load from File...</Button>
+                <Button Name="btnLoadFromResource" Click="BtnLoadFromResource_Click">Load Above image</Button>
+            </WrapPanel>
+            <Image Name="imgDynamic" Margin="10" Height="200" Width="300" />
+        </StackPanel>
+
+        <Label HorizontalAlignment="Center" >Testing some image modifications</Label>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" HorizontalAlignment="Center" FontWeight="Bold">Uniform</Label>
+            <Label Grid.Column="1" HorizontalAlignment="Center" FontWeight="Bold">UniformToFill</Label>
+            <Label Grid.Column="2" HorizontalAlignment="Center" FontWeight="Bold">Fill</Label>
+            <Label Grid.Column="3" HorizontalAlignment="Center" FontWeight="Bold">None</Label>
+            <Image Source="/Images/wpf-training.png" Stretch="Uniform" Grid.Column="0" Grid.Row="1" Margin="5" />
+            <Image Source="/Images/wpf-training.png" Stretch="UniformToFill" Grid.Column="1" Grid.Row="1" Margin="5" />
+            <Image Source="/Images/wpf-training.png" Stretch="Fill" Grid.Column="2" Grid.Row="1" Margin="5" />
+            <Image Source="/Images/wpf-training.png" Stretch="None" Grid.Column="3" Grid.Row="1" Margin="5" />
+        </Grid>
+    </StackPanel>
+    
+    
+</Window>

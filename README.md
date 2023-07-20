@@ -30,3 +30,18 @@ Each section has its own window for convenience. To access a particular window, 
 	- Label
 	- TextBox
 	- Button
+
+### 23.07.20
+
+- Control Units
+	- CheckBox
+	- RadioButton
+	- PasswordBox
+	- Image
+- Panels
+	- Canvas
+	- WrapPanel
+	- StackPanel
+	- DockPanel
+	- Grid
+- Data Binding Introduction

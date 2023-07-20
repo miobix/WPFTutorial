@@ -15,22 +15,13 @@ using System.Windows.Shapes;
 namespace WPFTutorial
 {
     /// <summary>
-    /// Interaction logic for TextBlock.xaml
+    /// Interaction logic for GridControl.xaml
     /// </summary>
-    public partial class TextBlock : Window
+    public partial class GridControl : Window
     {
-        public TextBlock()
+        public GridControl()
         {
             InitializeComponent();
-
-
         }
-
-        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
-        }
-
-       
     }
 }

@@ -15,16 +15,13 @@ using System.Windows.Shapes;
 namespace WPFTutorial
 {
     /// <summary>
-    /// Interaction logic for TextBox.xaml
+    /// Interaction logic for DockPanelControl.xaml
     /// </summary>
-    public partial class TextBox : Window
+    public partial class DockPanelControl : Window
     {
-
-        public TextBox()
+        public DockPanelControl()
         {
             InitializeComponent();
         }
-
-
     }
 }

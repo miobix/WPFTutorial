@@ -1,0 +1,56 @@
+﻿<Window x:Class="WPFTutorial.RadioButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTutorial"
+        mc:Ignorable="d"
+        Title="RadioButton" Height="450" Width="250">
+    <StackPanel>
+        <!--One individual group of RadioButtons-->
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Are you Male of Female?</Label>
+            <!--default with isChecked-->
+            <RadioButton IsChecked="True">Male</RadioButton>
+            <RadioButton>Female</RadioButton>
+            <RadioButton >Rather not say</RadioButton>
+        </StackPanel>
+        
+        <!--A group of radioButtons. Handle the selection from different groups with GroupName-->
+        <!--Without group name, only one selection would be valid for all radiobuttons-->
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Which is your dominant hand?</Label>
+            <RadioButton GroupName="hand">I am Righthanded</RadioButton>
+            <RadioButton GroupName="hand">I am Lefthanded</RadioButton>
+            <RadioButton GroupName="hand" IsChecked="True">Ambidextrous</RadioButton>
+
+            <Label FontWeight="Bold">Is the weather hot today?</Label>
+            <RadioButton GroupName="weather">Yes</RadioButton>
+            <RadioButton GroupName="weather">Very Much</RadioButton>
+            <RadioButton GroupName="weather" IsChecked="True">Is this a Sauna?</RadioButton>
+        </StackPanel>
+
+           <!--Custom Content is also Okay-->
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Are you ready?</Label>
+            <RadioButton>
+                <WrapPanel>
+                    <Image Width="16" Height="16" Margin="0,0,5,0" />
+                    <TextBlock Text="Yes" Foreground="Green" />
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton Margin="0,5">
+                <WrapPanel>
+                    <Image Width="16" Height="16" Margin="0,0,5,0" />
+                    <TextBlock Text="No" Foreground="Red" />
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton IsChecked="True">
+                <WrapPanel>
+                    <Image Width="16" Height="16" Margin="0,0,5,0" />
+                    <TextBlock Text="Maybe" Foreground="Gray" />
+                </WrapPanel>
+            </RadioButton>
+        </StackPanel>
+    </StackPanel>
+</Window>

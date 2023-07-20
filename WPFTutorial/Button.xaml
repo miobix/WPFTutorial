@@ -9,8 +9,25 @@
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
 
         <!--Simple button with a functionality, set in codeside-->
-        <Button Click="HelloWorldButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,4,0,0">Hello, World!</Button>
-
+        <Button Click="HelloWorldButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,4,0,0">
+            <Button.Content>Hello, World!</Button.Content>
+            <!--bonus: button with a tooltip!-->
+        <Button.ToolTip>
+            <StackPanel>
+                <TextBlock FontWeight="Bold" FontSize="14" Margin="0,0,0,5">Hello World Button</TextBlock>
+                <TextBlock>
+                        This is the only button from the group
+                        <LineBreak />
+                        that has a method assigned to it
+                </TextBlock>
+                <Border BorderBrush="Silver" BorderThickness="0,1,0,0" Margin="0,8" />
+                <WrapPanel>
+                    <Image Source="/WpfTutorialSamples;component/Images/help.png" Margin="0,0,5,0" />
+                    <TextBlock FontStyle="Italic">Click to see what happens!</TextBlock>
+                </WrapPanel>
+            </StackPanel>
+        </Button.ToolTip>
+        </Button>
         <!--Format for colors and fontweight-->
         <Button Background="Beige" Foreground="Blue" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Center">Formatted Button</Button>
 

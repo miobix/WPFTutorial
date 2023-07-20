@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:WPFTutorial"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              
-             StartupUri="Button.xaml"
+             StartupUri="GridControl.xaml"
              DispatcherUnhandledException="Application_DispatcherUnhandledException">
     <!--StartupUri tells which Window or page is to be started-->
 

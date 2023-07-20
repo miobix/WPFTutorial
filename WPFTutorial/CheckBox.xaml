@@ -1,0 +1,56 @@
+﻿<Window x:Class="WPFTutorial.CheckBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTutorial"
+        mc:Ignorable="d"
+        Title="CheckBox" Height="450" Width="250">
+
+    <StackPanel>
+        <!--the value on code-behind is a boolean-->
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Application Options</Label>
+            <CheckBox>Option One</CheckBox>
+            <CheckBox IsChecked="True">Enabled by Default</CheckBox>
+            <CheckBox>Another option</CheckBox>
+        </StackPanel>
+
+        <!--Any form of Control can be placed inside the checkbox. If no special Control, a TextBox is used by default-->
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Application Options</Label>
+            <CheckBox>
+                <TextBlock>
+				Enable feature <Run Foreground="Green" FontWeight="Bold">One</Run>
+                </TextBlock>
+            </CheckBox>
+            <CheckBox IsChecked="True">
+                <WrapPanel>
+                    <TextBlock TextWrapping="Wrap">
+					Enable feature <Run FontWeight="Bold">Checked by default. It can also have an image</Run>
+                    </TextBlock>
+                    <Image Width="16" Height="16" Margin="5,0" />
+                </WrapPanel>
+            </CheckBox>
+            <CheckBox>
+                <TextBlock>
+				Enable <Run Foreground="Blue" TextDecorations="Underline" FontWeight="Bold">Another</Run> Feature
+                </TextBlock>
+            </CheckBox>
+        </StackPanel>
+        
+        <!--Boolean value can be true, false or null, which is the case when an option is not selected-->
+        <!--This has to be activated on any given checkbox using IsThreeState="True"-->
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Application Options</Label>
+            <StackPanel Margin="10,5">
+                <CheckBox IsThreeState="True" Name="cbAllFeatures" Checked="cbAllFeatures_CheckedChanged" Unchecked="cbAllFeatures_CheckedChanged">Enable all</CheckBox>
+                <StackPanel Margin="20,5">
+                    <CheckBox Name="cbFeatureAbc" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">Enable feature ABC</CheckBox>
+                    <CheckBox Name="cbFeatureXyz" IsChecked="True" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">Enable feature XYZ</CheckBox>
+                    <CheckBox Name="cbFeatureWww" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">Enable feature WWW</CheckBox>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
