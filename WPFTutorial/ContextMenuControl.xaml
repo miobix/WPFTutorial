@@ -1,0 +1,58 @@
+﻿<Window x:Class="WPFTutorial.ContextMenuControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTutorial"
+        mc:Ignorable="d"
+        Title="ContextMenuControl" Height="450" Width="800">
+    <Window.Resources>
+        <ContextMenu x:Key="cmButton">
+            <MenuItem Header="Menu item 1" />
+            <MenuItem Header="Menu item 2" />
+            <Separator />
+            <MenuItem Header="Menu item 3" />
+        </ContextMenu>
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Center" Margin="10" TextWrapping="Wrap">Context Menu Basic Drawing - no commands added</TextBlock>
+        <Button Content="Right-click me!" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Menu item 1" />
+                    <MenuItem Header="Menu item 2" />
+                    <Separator />
+                    <MenuItem Header="Menu item 3" />
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <TextBlock HorizontalAlignment="Center" Margin="15" TextWrapping="Wrap">Context menu accepts images, more formatting. Can be added on any Control</TextBlock>
+        <StackPanel Margin="10">
+            <TextBox Text="Right Click inside here to see the context menu. ApplicationCommands applied to cut, copy, paste" Height="50">
+                <TextBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Command="Cut">
+                            <MenuItem.Icon>
+                                <Image Source="Images/cut.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Command="Copy">
+                            <MenuItem.Icon>
+                                <Image Source="/WpfTutorialSamples;component/Images/copy.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Command="Paste">
+                            <MenuItem.Icon>
+                                <Image Source="/WpfTutorialSamples;component/Images/paste.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </TextBox.ContextMenu>
+            </TextBox>
+        </StackPanel>
+
+        <TextBlock HorizontalAlignment="Center" Margin="15" TextWrapping="Wrap">Context menu can also be invoked from code-behind</TextBlock>
+        <Button Content="Access Context Menu Here" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click" />
+    </StackPanel>
+</Window>

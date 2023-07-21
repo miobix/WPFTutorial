@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\cut.png" />
     <None Remove="Images\wpf-training.png" />
     <None Remove="wpf-training.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\cut.png" />
     <Resource Include="Images\wpf-training.png" />
   </ItemGroup>
 

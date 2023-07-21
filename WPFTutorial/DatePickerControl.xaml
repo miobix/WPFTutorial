@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPFTutorial.DatePickerControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTutorial"
+        mc:Ignorable="d"
+        Title="DatePickerControl" Height="600" Width="400"> 
+    <StackPanel Margin="20">
+        <GroupBox Header="An example within a form">
+            <StackPanel>
+       
+        <Label>Name:</Label>
+        <TextBox />
+        <Label>Birthday:</Label>
+        <DatePicker></DatePicker>
+        <Label>Gender:</Label>
+        <ComboBox>
+            <ComboBoxItem>Female</ComboBoxItem>
+            <ComboBoxItem>Male</ComboBoxItem>
+        </ComboBox>
+        <Button Margin="20">Signup</Button>
+            </StackPanel>
+        </GroupBox>
+
+        <TextBlock Margin="10">Preselected Date on Open</TextBlock>
+        <DatePicker Name="dp1" DisplayDate="1990-08-06" />
+        <TextBlock Margin="10">Pre-fill a date. More Formats Allowed</TextBlock>
+        <DatePicker SelectedDate="2019-12-01" SelectedDateFormat="Long"></DatePicker>
+
+        <TextBlock Margin="10">It is possible to black out dates</TextBlock>
+        <DatePicker Name="dp2">
+            <DatePicker.BlackoutDates>
+                <CalendarDateRange Start="2023-07-01" End="2023-07-05" />
+                <CalendarDateRange Start="2023-07-09" End="2023-07-17" />
+            </DatePicker.BlackoutDates>
+        </DatePicker>
+    </StackPanel>
+</Window>

@@ -45,3 +45,27 @@ Each section has its own window for convenience. To access a particular window, 
 	- DockPanel
 	- Grid
 - Data Binding Introduction
+
+### 23.07.21
+
+- Review of Data Binding Content
+- Commands
+	- ApplicationCommands
+	- Execited and CanExecute Properties
+	- Command on another element, CommandTarget
+	- Custom Commands
+- Dialog, the MessageBox
+- Interface Controls
+	- Menu
+	- ContextMenu
+- Miscelaneous
+	- Border
+	- Slider
+	- GroupBox
+	- Calendar, DatePicker
+- Studied but not implemented on examples
+	- OpenFileDialog
+	- SaveFileDialog
+	- ToolBar Interface
+	- StatusBar Interface
+	- Rich Text Control, FlowDocument Control

@@ -1,0 +1,44 @@
+﻿<Window x:Class="WPFTutorial.MessageBoxes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTutorial"
+        mc:Ignorable="d"
+        Title="MessageBoxes" Height="450" Width="350">
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Center" Margin="10" TextWrapping="Wrap">Sampling for Message Boxes</TextBlock>
+        <TextBlock HorizontalAlignment="Center" Margin="10" TextWrapping="Wrap">This is also a test for Border Control</TextBlock>
+        <Border BorderBrush="Silver" CornerRadius="8,8,8,8" Width="250" Margin="0,30,0,30" BorderThickness="1,5,1,1">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="LightBlue" Offset="0.0" />
+                    <GradientStop Color="Cyan" Offset="0.5" />
+                    <GradientStop Color="DarkTurquoise" Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+            <StackPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0,0,0,10" />
+            </Style>
+        </StackPanel.Resources>
+        
+        <Button Name="btnSimpleMessageBox" Click="btnSimpleMessageBox_Click">Simple MessageBox</Button>
+        <Button Name="btnMessageBoxWithTitle" Click="btnMessageBoxWithTitle_Click">MessageBox with title</Button>
+        <!--Default button is OK, but more can be added-->
+        <Button Name="btnMessageBoxWithButtons" Click="btnMessageBoxWithButtons_Click">MessageBox with buttons</Button>
+        <!--YesNo, YesCancel, YesNoCancel-->
+        <Button Name="btnMessageBoxWithResponse" Click="btnMessageBoxWithResponse_Click">MessageBox with response</Button>
+        <!--Get user response on code behind-->
+        <Button Name="btnMessageBoxWithIcon" Click="btnMessageBoxWithIcon_Click">MessageBox with icon</Button>
+        <!--Predefined option, the user can just hit enter-->
+        <Button Name="btnMessageBoxWithDefaultChoice" Click="btnMessageBoxWithDefaultChoice_Click">MessageBox with default choice</Button>
+        <Button Name="btnMessageBoxAnnoying" Click="btnMessageBoxAnnoying_Click">Call the Annoying Box</Button>
+
+       
+    </StackPanel>
+    </Border>
+    </StackPanel>
+</Window>
